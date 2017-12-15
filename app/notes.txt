@@ -1,0 +1,16 @@
+ADA
+User Logging
+RTE in Ionic
+Pages
+	Content
+Media
+	Docs
+	Video
+	Images
+Feed
+Gallery
+
+Later
+	Multilingual 
+	User restricted frontend
+
