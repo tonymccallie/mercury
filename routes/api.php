@@ -26,3 +26,7 @@ Route::post('pagetree', 'PageController@pagemove');
 
 Route::get('templates', 'TemplateController@list');
 Route::get('/template/{id}', 'TemplateController@get');
+Route::put('/template/{id}', 'TemplateController@set');
+
+Route::put('/template_element/{id}', 'TemplateElementController@place');
+Route::post('/template_element', 'TemplateElementController@create');

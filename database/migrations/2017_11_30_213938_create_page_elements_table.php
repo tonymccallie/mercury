@@ -18,11 +18,11 @@ class CreatePageElementsTable extends Migration
 			$table->integer('page_id');
 			$table->string('location');
 			$table->integer('order')->default(0);
-			$table->dateTime('start')->nullable();
-			$table->dateTime('stop')->nullable();
 			$table->string('controller');
 			$table->string('action');
 			$table->text('config')->nullable();
+			$table->dateTime('start')->nullable();
+			$table->dateTime('stop')->nullable();
             $table->timestamps();
         });
     }

@@ -19,20 +19,22 @@
 		array_push($locations[$element->location], $element);
 	}
 ?>
-
 @foreach($locations as $key=>$location)
-	@section($key)
-		@foreach($location as $element)
-			<?php
-				if(!empty($element->controller)) {
-					$className = "\\App\\Http\\Controllers\\".$element->controller;
-					$tmpClass = new $className;
-					$actionName = $element->action;
-					echo $tmpClass::$actionName($element->config);
-					//eval('echo \\App\\Http\\Controllers\\'.$element->controller.'::'.$element->action.'();');
-				}
-			?>
-		@endforeach
-		<?php //echo PageController::menu(); ?>
-	@endsection
+@section($key)
+@foreach($location as $element)
+
+<!-- steeple-element <?php echo $element->controller.':'.$element->action.' '.$element->id ?> start -->
+<?php
+	if(!empty($element->controller)) {
+		$className = "\\App\\Http\\Controllers\\".$element->controller;
+		$tmpClass = new $className;
+		$actionName = $element->action;
+		echo $tmpClass::$actionName($element->config);
+		//eval('echo \\App\\Http\\Controllers\\'.$element->controller.'::'.$element->action.'();');
+	}
+?>
+
+<!-- steeple-element <?php echo $element->id ?> end -->
+@endforeach
+@endsection
 @endforeach

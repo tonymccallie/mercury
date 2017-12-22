@@ -24,6 +24,7 @@ class CreatePagesTable extends Migration
 			$table->boolean('hidden')->default(0);
 			$table->dateTime('start')->nullable();
 			$table->dateTime('stop')->nullable();
+			$table->softDeletes();
 			NestedSet::columns($table);
             $table->timestamps();
         });

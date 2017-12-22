@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class TemplateElement extends Model
 {
-    public function template() {
-		return $this->belongsTo(Template::class);
+	protected $orderBy = 'order';
+	protected $orderDirection = 'ASC';
+	
+	public function template() {
+		return $this->belongsTo(Template::class)->ordered();
 	}
 
 }

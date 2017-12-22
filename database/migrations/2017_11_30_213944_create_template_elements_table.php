@@ -17,12 +17,12 @@ class CreateTemplateElementsTable extends Migration
 			$table->increments('id');
 			$table->integer('template_id');
 			$table->string('location');
-			$table->dateTime('start')->nullable();
 			$table->integer('order')->default(0);
-			$table->dateTime('stop')->nullable();
 			$table->string('controller');
 			$table->string('action');
-			$table->text('config')->nullable();;
+			$table->text('config')->nullable();
+			$table->dateTime('start')->nullable();
+			$table->dateTime('stop')->nullable();
             $table->timestamps();
         });
     }

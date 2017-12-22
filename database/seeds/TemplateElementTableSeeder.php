@@ -27,8 +27,9 @@ class TemplateElementTableSeeder extends Seeder
 		TemplateElement::create([
 			'template_id' => 1,
 			'location' => 'content',
-			'controller' => '',
-			'action' => '',
+			'controller' => 'ContentController',
+			'action' => 'text',
+			'config' => '{"id":1}',
 			'order' => 0
 		]);
 

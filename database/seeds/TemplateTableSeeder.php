@@ -16,13 +16,13 @@ class TemplateTableSeeder extends Seeder
 			'id' => 1,
 			'title' => 'Default',
 			'file' => 'default',
-			'json' => '{}'
+			'json' => '[[{"title":"Menu","slug":"menu","descr":"","span":12,"enabled":false,"children":null}],[{"title":"Content","slug":"content","descr":"","span":"8","enabled":true,"children":null},{"title":"Sidebar","slug":"sidebar","descr":"","span":"4","enabled":false,"children":null}]]'
 		]);
 		Template::create([
 			'id' => 2,
 			'title' => 'Home',
 			'file' => 'home',
-			'json' => '{}'
+			'json' => '[[{"title":"Menu","slug":"menu","descr":"","span":12,"enabled":false,"children":null}],[{"title":"Content","slug":"content","descr":"","span":"8","enabled":true,"children":null},{"title":"Sidebar","slug":"sidebar","descr":"","span":"4","enabled":false,"children":null}]]'
 		]);
     }
 }
